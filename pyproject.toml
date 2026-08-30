@@ -27,7 +27,7 @@ dev = [
   "build==1.3.0",
   "mypy==1.18.2",
   "pip-audit==2.9.0",
-  "pytest==8.4.2",
+  "pytest==9.0.3",
   "pytest-cov==7.0.0",
   "ruff==0.13.2",
 ]
@@ -43,7 +43,7 @@ Issues = "https://github.com/KanadeK/markerwalk/issues"
 packages = ["src/markerwalk"]
 
 [tool.pytest.ini_options]
-addopts = "--strict-markers --strict-config --basetemp=.tmp/pytest --cov=markerwalk --cov-branch --cov-report=term-missing --cov-fail-under=90"
+addopts = "--strict-markers --strict-config --cov=markerwalk --cov-branch --cov-report=term-missing --cov-fail-under=90"
 testpaths = ["tests"]
 
 [tool.ruff]

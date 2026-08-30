@@ -10,4 +10,10 @@ pytest-of-*/
 .uv-cache/
 build/
 dist/
+release/
 *.egg-info/
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
