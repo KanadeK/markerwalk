@@ -12,7 +12,7 @@
   - Acceptance: small routes are optimal; large routes are deterministic and labelled heuristic.
   - Verify: route tests compare small solutions with known optima.
   - Files: `src/markerwalk/route.py`, `tests/test_route.py`
-- [ ] Task 4: CLI and artifacts
+- [x] Task 4: CLI and artifacts
   - Acceptance: real exit codes and five planning artifacts; invalid output is atomic.
   - Verify: CLI integration tests run through the console main function.
   - Files: CLI/render modules and `tests/test_cli.py`
