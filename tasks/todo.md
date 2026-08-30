@@ -4,11 +4,11 @@
   - Acceptance: valid input becomes typed data; invalid schema/path input fails explicitly.
   - Verify: focused loader tests fail first, then pass.
   - Files: `src/markerwalk/model.py`, `src/markerwalk/load.py`, `tests/test_load.py`
-- [ ] Task 2: Coverage audit
+- [x] Task 2: Coverage audit
   - Acceptance: missing views/files, attempts, and unmatched files are deterministic.
   - Verify: focused audit tests and fixture assertions pass.
   - Files: `src/markerwalk/audit.py`, `tests/test_audit.py`, example photo files
-- [ ] Task 3: Revisit routing
+- [x] Task 3: Revisit routing
   - Acceptance: small routes are optimal; large routes are deterministic and labelled heuristic.
   - Verify: route tests compare small solutions with known optima.
   - Files: `src/markerwalk/route.py`, `tests/test_route.py`
