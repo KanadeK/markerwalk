@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      UV_PYTHON: "3.11"
+      UV_CACHE_DIR: ${{ github.workspace }}/.uv-cache
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Install uv
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: "0.11.20"
+          enable-cache: true
+      - name: Install Python and locked dependencies
+        run: |
+          uv python install 3.11
+          uv sync --locked --all-extras --dev
+      - name: Verify tagged source and build assets
+        run: uv run --no-sync python scripts/check.py
+      - name: Publish immutable GitHub Release
+        run: >-
+          gh release create "$GITHUB_REF_NAME"
+          dist/markerwalk-*.whl
+          dist/markerwalk-*.tar.gz
+          release/markerwalk-examples-*.zip
+          --title "MarkerWalk $GITHUB_REF_NAME"
+          --notes-file release-notes.md
+          --verify-tag
+

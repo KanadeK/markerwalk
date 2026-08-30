@@ -1,0 +1,29 @@
+name: Bug report
+description: Report a reproducible MarkerWalk defect using synthetic data.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not attach real cemetery records, private photos, or credentials.
+  - type: input
+    id: version
+    attributes:
+      label: MarkerWalk version
+      placeholder: markerwalk 0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal synthetic reproduction
+      description: Include the command, synthetic manifest, exit code, and output.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+
