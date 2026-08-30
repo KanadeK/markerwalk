@@ -1,6 +1,6 @@
 # MarkerWalk v0.1.0 Tasks
 
-- [ ] Task 1: Manifest contract and secure loader
+- [x] Task 1: Manifest contract and secure loader
   - Acceptance: valid input becomes typed data; invalid schema/path input fails explicitly.
   - Verify: focused loader tests fail first, then pass.
   - Files: `src/markerwalk/model.py`, `src/markerwalk/load.py`, `tests/test_load.py`
@@ -27,4 +27,3 @@
 - [ ] Task 7: Public release and notification
   - Acceptance: remote main/tag CI green, Release assets public, fresh install works, Gmail sent.
   - Verify: public API/remote SHA/Release/contributor checks and sent-message result.
-

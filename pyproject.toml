@@ -43,7 +43,7 @@ Issues = "https://github.com/KanadeK/markerwalk/issues"
 packages = ["src/markerwalk"]
 
 [tool.pytest.ini_options]
-addopts = "--strict-markers --strict-config --cov=markerwalk --cov-branch --cov-report=term-missing --cov-fail-under=90"
+addopts = "--strict-markers --strict-config --basetemp=.tmp/pytest --cov=markerwalk --cov-branch --cov-report=term-missing --cov-fail-under=90"
 testpaths = ["tests"]
 
 [tool.ruff]
@@ -57,4 +57,3 @@ select = ["E", "F", "I", "UP", "B", "SIM", "C4", "PTH", "RUF"]
 python_version = "3.11"
 strict = true
 packages = ["markerwalk"]
-
