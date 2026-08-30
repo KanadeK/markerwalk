@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "survey": {
+    "name": "Complete demonstration survey",
+    "photo_root": "photos",
+    "views": ["front", "inscription", "context"],
+    "start": {"x": 0, "y": 0}
+  },
+  "markers": [
+    {
+      "id": "C-01",
+      "label": "Complete marker",
+      "x": 2,
+      "y": 2,
+      "required_views": ["front", "inscription", "context"],
+      "photos": [
+        {"path": "photos/C-01-front.jpg", "views": ["front", "inscription"]},
+        {"path": "photos/C-01-context.jpg", "views": ["context"]}
+      ]
+    }
+  ]
+}
+

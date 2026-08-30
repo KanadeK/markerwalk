@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "survey": {
+    "name": "Lantern Hill volunteer survey",
+    "photo_root": "photos",
+    "views": ["front", "inscription", "context", "condition"],
+    "start": {"x": 0, "y": 0},
+    "end": {"x": 0, "y": 0},
+    "bounds": {"min_x": 0, "min_y": 0, "max_x": 30, "max_y": 20}
+  },
+  "markers": [
+    {
+      "id": "A-01",
+      "label": "North row, marker 1",
+      "x": 8,
+      "y": 3,
+      "required_views": ["front", "inscription", "context"],
+      "photos": [
+        {"path": "photos/A-01-front.jpg", "views": ["front", "inscription"]}
+      ],
+      "attempts": [
+        {"date": "2026-08-12", "outcome": "weather", "note": "context view lost to glare"}
+      ]
+    },
+    {
+      "id": "A-02",
+      "label": "North row, marker 2",
+      "x": 15,
+      "y": 5,
+      "required_views": ["front", "condition"],
+      "photos": [
+        {"path": "photos/A-02-missing.jpg", "views": ["front"]}
+      ],
+      "attempts": [
+        {"date": "2026-08-12", "outcome": "not_found", "note": "verify plot map"}
+      ]
+    },
+    {
+      "id": "B-01",
+      "label": "East row, marker 1",
+      "x": 22,
+      "y": 12,
+      "required_views": ["front", "context"],
+      "photos": [
+        {"path": "photos/B-01-all.webp", "views": ["front", "context"]}
+      ]
+    }
+  ]
+}
+

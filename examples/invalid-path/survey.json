@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "survey": {
+    "name": "Invalid path demonstration",
+    "views": ["front"],
+    "start": {"x": 0, "y": 0}
+  },
+  "markers": [
+    {
+      "id": "X-01",
+      "label": "Invalid marker",
+      "x": 1,
+      "y": 1,
+      "required_views": ["front"],
+      "photos": [
+        {"path": "../outside.jpg", "views": ["front"]}
+      ]
+    }
+  ]
+}
+
