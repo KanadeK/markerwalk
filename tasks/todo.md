@@ -1,0 +1,30 @@
+# MarkerWalk v0.1.0 Tasks
+
+- [ ] Task 1: Manifest contract and secure loader
+  - Acceptance: valid input becomes typed data; invalid schema/path input fails explicitly.
+  - Verify: focused loader tests fail first, then pass.
+  - Files: `src/markerwalk/model.py`, `src/markerwalk/load.py`, `tests/test_load.py`
+- [ ] Task 2: Coverage audit
+  - Acceptance: missing views/files, attempts, and unmatched files are deterministic.
+  - Verify: focused audit tests and fixture assertions pass.
+  - Files: `src/markerwalk/audit.py`, `tests/test_audit.py`, example photo files
+- [ ] Task 3: Revisit routing
+  - Acceptance: small routes are optimal; large routes are deterministic and labelled heuristic.
+  - Verify: route tests compare small solutions with known optima.
+  - Files: `src/markerwalk/route.py`, `tests/test_route.py`
+- [ ] Task 4: CLI and artifacts
+  - Acceptance: real exit codes and five planning artifacts; invalid output is atomic.
+  - Verify: CLI integration tests run through the console main function.
+  - Files: CLI/render modules and `tests/test_cli.py`
+- [ ] Task 5: Examples and user documentation
+  - Acceptance: complete/incomplete/invalid examples plus exact acceptance and repair commands.
+  - Verify: scripted example expectations pass.
+  - Files: `examples/`, `README.md`, `docs/`
+- [ ] Task 6: CI, package, and release gate
+  - Acceptance: one local command proves tests/static checks/examples/build/isolated install.
+  - Verify: `uv run python scripts/check.py` passes from a clean checkout.
+  - Files: `scripts/check.py`, workflows, release documents
+- [ ] Task 7: Public release and notification
+  - Acceptance: remote main/tag CI green, Release assets public, fresh install works, Gmail sent.
+  - Verify: public API/remote SHA/Release/contributor checks and sent-message result.
+
