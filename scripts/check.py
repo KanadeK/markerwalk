@@ -117,7 +117,9 @@ def isolated_install(python: str) -> None:
 
 def main() -> int:
     clean_generated()
-    expected_tag = os.environ.get("GITHUB_REF_NAME")
+    expected_tag = (
+        os.environ.get("GITHUB_REF_NAME") if os.environ.get("GITHUB_REF_TYPE") == "tag" else None
+    )
     if expected_tag and expected_tag != f"v{__version__}":
         raise SystemExit(f"tag {expected_tag} does not match package version {__version__}")
 
